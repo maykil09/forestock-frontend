@@ -1,18 +1,6 @@
 "use client";
 
 import * as React from "react";
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
 
 import NavMain from "./nav-main";
 import NavUser from "./nav-user";
@@ -25,8 +13,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
-import { allRoutes } from "@/app/constants/route";
-import { branches } from "@/app/constants/example-data";
+import { allRoutes } from "@/constants/route";
+import { branches } from "@/constants/example-data";
 
 // This is sample data.
 const data = {

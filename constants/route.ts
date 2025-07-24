@@ -5,11 +5,15 @@ import {
   PackageOpen,
   Boxes,
   UsersRound,
+  UserRound,
   CircleUser,
   ShieldUser,
   Newspaper,
   Banknote,
   Truck,
+  Computer,
+  Shield,
+  CircleUserRound,
 } from "lucide-react";
 
 export const allRoutes = [
@@ -19,9 +23,40 @@ export const allRoutes = [
     url: "/overview",
   },
   {
-    title: "User",
+    title: "User Management",
     icon: UsersRound,
-    url: "/user",
+    child: [
+      {
+        title: "User",
+        icon: UserRound,
+        url: "/user",
+      },
+      {
+        title: "Role",
+        icon: CircleUser,
+        url: "/user/role",
+      },
+      {
+        title: "Permission",
+        icon: Shield,
+        url: "/user/permission",
+      },
+      {
+        title: "Assign Role",
+        icon: CircleUserRound,
+        url: "/user/assign-role",
+      },
+      {
+        title: "Assign Permission",
+        icon: ShieldUser,
+        url: "/user/assign-permission",
+      },
+      {
+        title: "Assign Branch",
+        icon: Store,
+        url: "/user/assign-branch",
+      },
+    ],
   },
   {
     title: "Product Management",
@@ -60,13 +95,8 @@ export const allRoutes = [
     url: "/branch",
   },
   {
-    title: "Role",
-    icon: CircleUser,
-    url: "/role",
-  },
-  {
-    title: "Permission",
-    icon: ShieldUser,
-    url: "/permission",
+    title: "Transaction",
+    icon: Computer,
+    url: "/transaction",
   },
 ];

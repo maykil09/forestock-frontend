@@ -37,7 +37,6 @@ const NavMain = ({
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => {
-          console.log(item.child);
           return item.child !== undefined ? (
             <Collapsible
               key={item.title}
@@ -45,7 +44,7 @@ const NavMain = ({
               defaultOpen={item.isActive}
               className="group/collapsible">
               <SidebarMenuItem>
-                <CollapsibleTrigger asChild>
+                <CollapsibleTrigger className="cursor-pointer" asChild>
                   <SidebarMenuButton tooltip={item.title}>
                     {item.icon && <item.icon />}
                     <span>{item.title}</span>
@@ -55,7 +54,9 @@ const NavMain = ({
                 <CollapsibleContent>
                   <SidebarMenuSub>
                     {item.child?.map((subItem) => (
-                      <SidebarMenuSubItem key={subItem.title}>
+                      <SidebarMenuSubItem
+                        className="cursor-pointer"
+                        key={subItem.title}>
                         <SidebarMenuSubButton asChild>
                           <Link href={subItem.url}>
                             {subItem.icon && <subItem.icon />}
@@ -69,7 +70,10 @@ const NavMain = ({
               </SidebarMenuItem>
             </Collapsible>
           ) : (
-            <SidebarMenuButton key={item.title} asChild>
+            <SidebarMenuButton
+              className="cursor-pointer"
+              key={item.title}
+              asChild>
               <Link href={item.url || ""}>
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>
