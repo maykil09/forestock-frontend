@@ -14,6 +14,7 @@ import {
   Computer,
   Shield,
   CircleUserRound,
+  ClipboardPenLine,
 } from "lucide-react";
 
 export const allRoutes = [
@@ -84,7 +85,7 @@ export const allRoutes = [
       },
       {
         title: "Request",
-        icon: Newspaper,
+        icon: ClipboardPenLine,
         url: "/product/request",
       },
     ],
@@ -98,5 +99,10 @@ export const allRoutes = [
     title: "Transaction",
     icon: Computer,
     url: "/transaction",
+  },
+  {
+    title: "Reports",
+    icon: Newspaper,
+    url: "/reports",
   },
 ];

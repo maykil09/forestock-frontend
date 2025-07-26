@@ -1,9 +1,14 @@
-import React from 'react'
+import HeaderTitle from "@/components/shared/HeaderTitle";
+import React from "react";
 
 const User = () => {
   return (
-    <div>User</div>
-  )
-}
+    <>
+      <div className="px-4">
+        <HeaderTitle title="Overview" />
+      </div>
+    </>
+  );
+};
 
-export default User
+export default User;
